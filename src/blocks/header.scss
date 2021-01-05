@@ -1,0 +1,231 @@
+.header {
+    width: 100%;
+    background-color: $secondColor;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+    &__container {
+        width: 95%;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu-header-container {
+        display: none;
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $fourthColor;
+        margin-right: 10px;
+
+        &:hover {
+            color: $firstColor;
+        }
+    }
+
+    &__li {
+        position: relative;
+    }
+
+    &__link_select {
+        padding-left: 0;
+        padding-right: 20px;
+
+        &:after {
+            content: "";
+            border: 5px solid transparent;
+            border-top: 5px solid $fourthColor;
+            position: absolute;
+            bottom: 1px;
+            margin-left: 10px;
+        }
+
+        &:focus {
+            color: $firstColor;
+        }
+    }
+
+    &__item {
+        &:nth-child(1):after {
+            content: "";
+            height: 26px;
+            display: inline-block;
+            border-right: 2px solid $fourthColor;
+        }
+    }
+
+    &__logo {
+        grid-column: 1 / 2;
+
+        &_rg {
+            width: 58px;
+            height: 28px;
+            padding-right: 10px;
+        }
+
+        &_v {
+            width: 40px;
+            height: 26px;
+            padding-left: 10px;
+        }
+
+        &_vb {
+            width: 200px;
+            height: 37px;
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__avatar {
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    &__burger {
+        display: none;
+        width: 49px;
+        height: 45px;
+        cursor: pointer;
+    }
+}
+
+@include _1480 {
+    .header {
+        border-radius: 0;
+    }
+}
+
+@include _1180 {
+    .header {
+
+        &__container {
+            width: 90%;
+        }
+
+        &__menu {
+            visibility: hidden;
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100%;
+            min-width: 320px;
+            background-color: $secondColor;
+            transition: all 0.4s ease 0s;
+            overflow: scroll;
+            @include tr(100%, 0);
+            z-index: 1000;
+
+        }
+
+        &__menu-header-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 20px 0;
+
+        }
+
+        &__list {
+            flex-direction: column;
+
+            &_user {
+                flex-direction: row;
+            }
+        }
+
+        &__link {
+            margin-right: 0;
+            font-size: 20px;
+
+            &_u {
+                display: none;
+            }
+        }
+
+        &__li {
+            &_nav {
+                width: 100%;
+                padding-top: 18px;
+                padding-left: 25px;
+                height: 55px;
+                background-color: $thirdColor;
+                border-bottom: 1px solid $secondColor;
+            }
+
+        }
+
+        &__link_select {
+
+            &:after {
+                content: "";
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-left: 5px solid #EFEFEF;
+                bottom: 20px;
+            }
+        }
+
+        &__logo {
+
+            &_rg {
+                width: 70px;
+                height: 31px;
+            }
+
+            &_v {
+                width: 45px;
+                height: 30px;
+            }
+
+            &_vb {
+                display: block;
+            }
+        }
+
+        &__burger {
+            display: block;
+        }
+
+        &__avatar {
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+                border: 2px solid $firstColor;
+            }
+        }
+    }
+}
+
+@include _530 {
+    .header {
+
+        &__container {
+            width: 85%;
+        }
+
+        &__logo {
+
+            &_vb-plug {
+                display: none;
+            }
+        }
+
+    }
+}

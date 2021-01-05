@@ -1,0 +1,61 @@
+@mixin img($url: false) {
+  @if ($url) {
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @else {
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin repeatGrid($numColumn: 0, $sizeColumn: 0, $numRow: 0, $sizeRow: 0) {
+  display: grid;
+  grid-template-columns: repeat($numColumn, $sizeColumn);
+  grid-template-rows: repeat($numRow, $sizeRow);
+}
+
+@mixin tr($tx, $ty) {
+  transform: translate($tx, $ty);
+}
+
+
+@mixin _1480 {
+  @media (max-width: 1480px) {
+    @content;
+  }
+}
+
+@mixin _1180 {
+  @media (max-width: 1180px) {
+    @content;
+  }
+}
+
+@mixin _530 {
+  @media (max-width: 530px) {
+    @content;
+  }
+}
+
+// @mixin _600 {
+//   @media (max-width: 600px) {
+//     @content;
+//   }
+// }
+
+// @mixin _480 {
+//   @media (max-width: 480px) {
+//     @content;
+//   }
+// }
+
+// @mixin _350 {
+//   @media (max-width: 350px) {
+//     @content;
+//   }
+// }

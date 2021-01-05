@@ -1,0 +1,62 @@
+.popup {
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: 45px;
+    left: -8px;
+    width: 125px;
+    background-color: $secondColor;
+    z-index: 300;
+    border: 1px solid $fourthColor;
+
+    &__li {
+        min-width: 115px;
+        min-height: 28px;
+        padding-left: 10px;
+        padding-top: 7px;
+
+        &:hover {
+            background-color: $thirdColor;
+        }
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $fourthColor;
+
+        &:hover {
+            color: $firstColor;
+        }
+    }
+
+}
+
+@include _1180 {
+    .popup {
+        top: 57px;
+        left: 0px;
+        width: 100%;
+        border: none;
+
+        &_u {
+            z-index: 800;
+            position: fixed;
+            top: 86px;
+        }
+
+        &__link {
+            margin-right: 0;
+            font-size: 20px;
+        }
+    
+        &__li {
+            width: 100%;
+            padding-top: 18px;
+            padding-left: 25px;
+            height: 55px;
+            border-bottom: 1px solid $thirdColor;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.card {
+    // -webkit-clip-path: polygon(5% 0%, 102.08% 0.23%, 120% 145%, 0% 100%, -10% 5%);
+    // clip-path: polygon(5% 0%, 102.08% 0.23%, 120% 145%, 0% 100%, -10% 5%);
+    // border-radius: 30px 0px 30px 0px;
+    background-color: $secondColor;
+    width: 193px;
+    height: 430px;
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 55px;
+
+
+    &_phoenix {
+        background-image: url('./img/Art.png');
+    }
+
+    &_jett {
+        background-image: url('./img/Art1.png');
+    }
+
+    &_sova {
+        background-image: url('./img/Art2.png');
+    }
+
+    &_sage {
+        background-image: url('./img/Art3.png');
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+    
+    &:hover {
+        background-color: $fourthColor;
+        border: 1px solid $secondColor;
+
+        .card__skill {
+            fill: $secondColor;
+        }
+
+        .card__name {
+            -webkit-text-stroke: 1px $secondColor;
+            text-stroke: 1px $secondColor;
+        }
+
+        .card__skills {
+            border: 1px solid $secondColor;
+        }
+    }
+
+    &__unit {
+        min-width: 212px;
+        transform: rotate(90deg);
+        position: absolute;
+        top: 105px;
+        left: -95px;
+    }
+
+    &__name {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1.1em;
+        letter-spacing: 0.1em;
+        color: transparent;
+        -webkit-text-stroke: 0.5px $fourthColor;
+        text-stroke: 0.5px $fourthColor;
+    }
+
+    &__coutry {
+        color: $firstColor;
+        letter-spacing: 0.1em;
+    }
+
+    &__skills {
+        width: 192px;
+        background-color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $fourthColor;
+        position: absolute;
+        bottom: -18px;
+        right: -20px;
+    }
+
+    &__skill {
+        fill: $fourthColor;
+        margin: 10px;
+    }
+}

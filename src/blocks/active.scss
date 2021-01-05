@@ -1,0 +1,4 @@
+.active {
+    visibility: visible;
+    @include tr(0, 0);
+}

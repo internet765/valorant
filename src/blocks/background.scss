@@ -1,0 +1,114 @@
+.background {
+    width: 100%;
+    height: 100%;
+    background-color: $secondColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &__logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        width: 35px;
+        height: 35px;
+    }
+
+    &__logo-text {
+        padding-left: 7px;
+        color: $fourthColor;
+    }
+
+    &__circle {
+        border-radius: 100%;
+    }
+
+    :nth-child(3) {
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        top: -200px;
+        left: -100px;
+        background-color: $firstColor;
+    }
+
+    :nth-child(4) {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        bottom: -140px;
+        right: -50px;
+        background-color: $thirdColor;
+    }
+
+    :nth-child(5) {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        bottom: -90px;
+        left: 50px;
+        background-color: $fourthColor;
+    }
+
+    :nth-child(6) {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 70px;
+        top: 50px;
+        background-color: $fourthColor;
+    }
+
+    :nth-child(7) {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 30px;
+        top: 180px;
+        background-color: $fifthColor;
+        // animation: Orbita 3s linear infinite;
+    }
+
+    :nth-child(8) {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 30px;
+        bottom: 50px;
+        background-color: $fifthColor;
+        // animation: Orbita 2s linear infinite;
+   
+    }
+
+    :nth-child(9) {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 90px;
+        top: 20px;
+        background-color: $firstColor;
+        // animation: Orbita 1s linear infinite;
+    }
+
+    @include _1480{
+        display: none;
+    }
+}
+
+// @keyframes Orbita {
+//     from {
+//         transform: rotate(180deg) translateX(30px) rotate(180deg);
+//     }
+
+//     to {
+//         transform: rotate(540deg) translateX(30px) rotate(540deg);
+//     }
+// }
