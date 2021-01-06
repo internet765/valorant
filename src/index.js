@@ -7,8 +7,6 @@ const popupDiscover = document.querySelector('.popup_d');
 const popupUnepicked = document.querySelector('.popup_u');
 const headerMenu = document.querySelector('.header__menu');
 
-// открывашки попапов и меню
-
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('header__link_n')) {
         popupNews.classList.toggle('active');
@@ -40,11 +38,49 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// настройки слайдера
+// настройки слайдера героев
 
-// const mediaQuerySize = 1180;
+(function () {
 
-export const mySwiper = new Swiper(".swiper-container", {
+    const breakpoint = window.matchMedia('(min-width:1060px)');
+
+    let mySwiper;
+
+    const breakpointChecker = function () {
+
+        if (breakpoint.matches === true) {
+
+            if (mySwiper !== undefined) mySwiper.destroy(true, true);
+            return;
+
+        } else if (breakpoint.matches === false) {
+
+            return enableSwiper();
+
+        }
+
+    };
+
+    const enableSwiper = function () {
+
+        mySwiper = new Swiper('.swiper-container', {
+            loop: false,
+            slidesPerView: 'auto',
+            keyboardControl: true,
+            grabCursor: true,
+        });
+
+    };
+
+    breakpoint.addListener(breakpointChecker);
+
+    breakpointChecker();
+
+})();
+
+
+export const mySwiper = new Swiper(".swiper-container-skill", {
+    init: false,
     loop: true,
     loopedSlides: 1,
     slidesPerView: 3,
@@ -52,17 +88,16 @@ export const mySwiper = new Swiper(".swiper-container", {
     simulateTouch: false,
     slidesPerGroup: 3,
     initialSlide: 0,
-    
+
+    // breakpoints: {
+    //     1090: {
+    //         slidesPerView: 2,
+    //     },
+    // },
+
     navigation: {
         prevEl: ".swiper-button-prev",
       },
 });
 
-// window.addEventListener(`resize`, () => {
-//     let windowWidth = document.documentElement.clientWidth;
-//     if (windowWidth <= mediaQuerySize) {
-//         mySwiper.init();
-//     } else {
-//         mySwiper.destroy();
-//     }
-// })
+mySwiper.init()

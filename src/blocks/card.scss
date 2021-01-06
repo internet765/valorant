@@ -32,7 +32,7 @@
     &:last-child {
         margin-right: 0;
     }
-    
+
     &:hover {
         background-color: $fourthColor;
         border: 1px solid $secondColor;
@@ -93,3 +93,14 @@
         margin: 10px;
     }
 }
+
+// @include _1180 {
+//     .card {
+//         width: 156px;
+//         height: 350px;
+
+//         &__skills {
+//             width: 156px;
+//         }
+//     }
+// }

@@ -63,3 +63,12 @@
     }
 
 }
+
+@include _1180 {
+    .footer {
+         &__button {
+             display: none;
+         }
+ 
+     }
+  }

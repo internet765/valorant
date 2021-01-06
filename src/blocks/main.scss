@@ -73,20 +73,10 @@
       align-items: center;
     }
 
-    &__title {
-      position: static;
-      transform: none;
-      color: transparent;
-      height: 70px;
-      width: 440px;
-      margin-right: 0;
-      margin-bottom: 30px;
-    }
-  }
-}
+    // &__card-container {
+    //   width: 630px;
+    // }
 
-@include _530 {
-  .main {
     &__title {
       display: none;
     }
