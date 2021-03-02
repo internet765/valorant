@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     background-color: rgb(0 0 0 / 0.7);
+    min-width: 0;
   }
 
   &__container {
@@ -73,12 +74,25 @@
       align-items: center;
     }
 
-    // &__card-container {
-    //   width: 630px;
-    // }
-
     &__title {
       display: none;
     }
   }
 }
+
+// @include _1060 {
+
+//   .main {
+//     &__container {
+//       display: flex;
+//       flex-direction: row;
+
+//     }
+  
+//     &__card-container {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: space-between;
+//     }
+//   }
+// }

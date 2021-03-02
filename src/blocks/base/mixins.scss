@@ -30,6 +30,7 @@
   }
 }
 
+
 @mixin _1180 {
   @media (max-width: 1180px) {
     @content;
@@ -38,6 +39,12 @@
 
 @mixin _530 {
   @media (max-width: 530px) {
+    @content;
+  }
+}
+
+@mixin _1060 {
+  @media (min-width: 1060px) {
     @content;
   }
 }

@@ -54,3 +54,11 @@
         right: -20px;
     }
 }
+
+@include _530 {
+    @media (max-width: 530px) {
+        .slide {
+            max-width: 270px;
+        }
+    }
+  }

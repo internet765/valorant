@@ -1,6 +1,5 @@
 import "./index.scss";
-import Swiper from "swiper/bundle";
-
+import Swiper from 'swiper/bundle';
 
 const popupNews = document.querySelector('.popup_n');
 const popupDiscover = document.querySelector('.popup_d');
@@ -38,8 +37,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// настройки слайдера героев
-
 (function () {
 
     const breakpoint = window.matchMedia('(min-width:1060px)');
@@ -65,9 +62,9 @@ document.addEventListener('click', (e) => {
 
         mySwiper = new Swiper('.swiper-container', {
             loop: false,
-            slidesPerView: 'auto',
-            keyboardControl: true,
-            grabCursor: true,
+            spaceBetween: 52,
+            slidesPerView: 'auto'
+
         });
 
     };
@@ -80,20 +77,12 @@ document.addEventListener('click', (e) => {
 
 
 export const mySwiper = new Swiper(".swiper-container-skill", {
-    init: false,
     loop: true,
-    loopedSlides: 1,
-    slidesPerView: 3,
-    spaceBetween: 30,
-    simulateTouch: false,
     slidesPerGroup: 3,
-    initialSlide: 0,
-
-    // breakpoints: {
-    //     1090: {
-    //         slidesPerView: 2,
-    //     },
-    // },
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    spaceBetween: 30,
+    loopedSlides: 1,
 
     navigation: {
         prevEl: ".swiper-button-prev",
