@@ -61,10 +61,11 @@ document.addEventListener('click', (e) => {
     const enableSwiper = function () {
 
         mySwiper = new Swiper('.swiper-container', {
-            loop: false,
+            loop: true,
             spaceBetween: 52,
-            slidesPerView: 'auto'
-
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            slidesPerGroup: 4,
         });
 
     };
