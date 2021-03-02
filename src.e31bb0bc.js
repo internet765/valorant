@@ -12044,9 +12044,11 @@ document.addEventListener('click', function (e) {
 
   var enableSwiper = function enableSwiper() {
     mySwiper = new _bundle.default('.swiper-container', {
-      loop: false,
+      loop: true,
       spaceBetween: 52,
-      slidesPerView: 'auto'
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      slidesPerGroup: 4
     });
   };
 
@@ -12095,7 +12097,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49281" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49936" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
