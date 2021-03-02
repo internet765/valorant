@@ -65,7 +65,8 @@ document.addEventListener('click', (e) => {
             spaceBetween: 52,
             centeredSlides: true,
             slidesPerView: 'auto',
-            slidesPerGroup: 4,
+            slidesPerGroup: 3,
+
         });
 
     };
@@ -91,3 +92,6 @@ export const mySwiper = new Swiper(".swiper-container-skill", {
 });
 
 mySwiper.init()
+
+
+//аватар

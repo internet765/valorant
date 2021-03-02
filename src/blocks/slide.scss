@@ -1,8 +1,6 @@
 .slide {
     border: 1.5px solid $secondColor;
     background-color: $fourthColor;
-    // -webkit-clip-path: polygon(3.40% 0.92%, 100% 0%, 100% 100%, 0% 100%, 0% 8.67%);
-    // clip-path: polygon(3.40% 0.92%, 100% 0%, 100% 100%, 0% 100%, 0% 8.67%);
     padding: 10px 15px;
     display: flex;
     flex-direction: row;
@@ -43,7 +41,7 @@
         margin-left: 10px;
         margin-right: 15px;
         position: relative;
-        bottom: -23px;
+        bottom: -15px;
         right: 0;
     }
 
@@ -58,7 +56,7 @@
 @include _530 {
     @media (max-width: 530px) {
         .slide {
-            max-width: 270px;
+            max-width: 300px;
         }
     }
   }
